@@ -49,3 +49,14 @@ output "platform_breakglass_role_arn" {
   description = "The ARN of the platform breakglass role"
   value       = try(module.breakglass_role[0].role_arn, "")
 }
+
+output "spoke_platform_admin_role_arn" {
+  description = "The ARN of the spoke platform admin role"
+  value       = try(aws_iam_role.spoke_platform_admin[0].arn, "")
+}
+
+output "hub_assume_spoke_policy_arn" {
+  description = "The ARN of the policy for assuming spoke roles"
+  value       = try(aws_iam_policy.hub_assume_spoke[0].arn, "")
+}
+

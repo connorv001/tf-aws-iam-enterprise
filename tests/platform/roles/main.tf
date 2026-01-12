@@ -8,6 +8,9 @@ module "platform_roles" {
   breakglass_approvers = ["my-org/ops-emergencies"]
   sns_topic_arn         = "arn:aws:sns:us-east-1:123456789012:security-alerts"
   
+  hub_account_id    = "123456789012"
+  spoke_account_ids = ["222222222222", "333333333333"]
+  
   tags = {
     Environment = "Test"
     Team        = "Platform"
@@ -26,5 +29,7 @@ output "role_arns" {
     security_engineer    = module.platform_roles.security_engineer_role_arn
     instance_scheduler   = module.platform_roles.instance_scheduler_role_arn
     platform_breakglass  = module.platform_roles.platform_breakglass_role_arn
+    spoke_admin          = module.platform_roles.spoke_platform_admin_role_arn
+    hub_assume_policy    = module.platform_roles.hub_assume_spoke_policy_arn
   }
 }

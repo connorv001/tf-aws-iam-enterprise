@@ -38,6 +38,19 @@ variable "enabled_roles" {
   }
 }
 
+variable "hub_account_id" {
+  description = "The AWS Account ID of the Hub account"
+  type        = string
+  default     = ""
+}
+
+variable "spoke_account_ids" {
+  description = "List of AWS Account IDs for Spoke accounts"
+  type        = list(string)
+  default     = []
+}
+
+
 variable "breakglass_approvers" {
   description = "List of GitHub repositories allowed to trigger breakglass"
   type        = list(string)
