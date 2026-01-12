@@ -1,0 +1,26 @@
+{
+    "id": "platform_team",
+    "name": "Platform Team IAM (ITOC)",
+    "version": "1.0.0",
+    "status": "active",
+    "created_date": "2026-01-12",
+    "team": "platform",
+    "domain": "iam-platform",
+    "description": "IAM roles for platform engineers, architects, and operations staff managing infrastructure across multi-account AWS deployment",
+    "dependencies": [
+        "foundation_iam"
+    ],
+    "related_tracks": [
+        "devops_team",
+        "security_team",
+        "oat_team",
+        "bi_team"
+    ],
+    "critical": true,
+    "roles_count": 120,
+    "slo": {
+        "deployment_frequency": "weekly",
+        "change_lead_time_days": 2,
+        "role_assumption_latency_ms": 1000
+    }
+}
