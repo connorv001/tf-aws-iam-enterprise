@@ -1,0 +1,24 @@
+{
+    "id": "devops_team",
+    "name": "DevOps Team IAM",
+    "version": "1.0.0",
+    "status": "active",
+    "created_date": "2026-01-12",
+    "team": "devops",
+    "domain": "iam-devops",
+    "description": "IAM roles and policies for DevOps team managing CI/CD pipelines, service deployment roles, and multi-account infrastructure automation",
+    "dependencies": [
+        "foundation_iam"
+    ],
+    "related_tracks": [
+        "platform_team",
+        "security_team"
+    ],
+    "critical": true,
+    "applications_count": 50,
+    "slo": {
+        "deployment_frequency": "weekly",
+        "change_lead_time_days": 2,
+        "pipeline_reliability": "99.9%"
+    }
+}
