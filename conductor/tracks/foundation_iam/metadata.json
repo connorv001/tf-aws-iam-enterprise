@@ -1,0 +1,23 @@
+{
+  "id": "foundation_iam",
+  "name": "Enterprise IAM Foundation",
+  "version": "1.0.0",
+  "status": "active",
+  "created_date": "2026-01-12",
+  "team": "platform",
+  "domain": "iam-foundation",
+  "description": "Foundation layer for enterprise IAM including password policies, KMS, naming conventions, and multi-account architecture",
+  "dependencies": [],
+  "related_tracks": [
+    "devops_team",
+    "platform_team",
+    "security_team",
+    "oat_team",
+    "bi_team"
+  ],
+  "critical": true,
+  "slo": {
+    "deployment_frequency": "quarterly",
+    "change_lead_time_days": 5
+  }
+}
