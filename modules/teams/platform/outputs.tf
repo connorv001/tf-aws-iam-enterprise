@@ -44,3 +44,8 @@ output "instance_scheduler_role_arn" {
   description = "The ARN of the instance scheduler role"
   value       = try(module.instance_scheduler_role[0].role_arn, "")
 }
+
+output "platform_breakglass_role_arn" {
+  description = "The ARN of the platform breakglass role"
+  value       = try(module.breakglass_role[0].role_arn, "")
+}

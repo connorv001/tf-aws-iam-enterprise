@@ -37,3 +37,15 @@ variable "enabled_roles" {
     instance_scheduler    = true
   }
 }
+
+variable "breakglass_approvers" {
+  description = "List of GitHub repositories allowed to trigger breakglass"
+  type        = list(string)
+  default     = []
+}
+
+variable "sns_topic_arn" {
+  description = "SNS topic ARN for security alerts"
+  type        = string
+  default     = ""
+}

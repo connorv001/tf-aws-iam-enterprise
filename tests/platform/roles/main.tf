@@ -5,6 +5,9 @@ module "platform_roles" {
   permissions_boundary_arn = "arn:aws:iam::123456789012:policy/boundary"
   github_org               = "my-org"
   
+  breakglass_approvers = ["my-org/ops-emergencies"]
+  sns_topic_arn         = "arn:aws:sns:us-east-1:123456789012:security-alerts"
+  
   tags = {
     Environment = "Test"
     Team        = "Platform"
@@ -22,5 +25,6 @@ output "role_arns" {
     network_engineer     = module.platform_roles.network_engineer_role_arn
     security_engineer    = module.platform_roles.security_engineer_role_arn
     instance_scheduler   = module.platform_roles.instance_scheduler_role_arn
+    platform_breakglass  = module.platform_roles.platform_breakglass_role_arn
   }
 }
