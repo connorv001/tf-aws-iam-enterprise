@@ -12,3 +12,4 @@ conductor/*
 *.tfvars
 *.tfvars.json
 **/.terraform/*
+modules/foundation/cloudtrail-centralized/.terraform/*
