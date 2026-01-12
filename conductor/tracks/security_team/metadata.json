@@ -1,0 +1,23 @@
+{
+    "id": "security_team",
+    "name": "Security Team IAM",
+    "version": "1.0.0",
+    "status": "active",
+    "created_date": "2026-01-12",
+    "team": "security",
+    "domain": "iam-security",
+    "description": "IAM roles for security teams managing cloud security posture, compliance, threat detection, and incident response",
+    "dependencies": [
+        "foundation_iam"
+    ],
+    "related_tracks": [
+        "platform_team",
+        "devops_team"
+    ],
+    "critical": true,
+    "slo": {
+        "mttd_minutes": 5,
+        "mttr_minutes": 15,
+        "compliance_score": 95
+    }
+}
