@@ -5,13 +5,6 @@ This file provides an index of all major tracks for the **tf-aws-iam-enterprise*
 
 ## Active Tracks
 
-### Foundation Track
-- **Location**: `foundation_iam/`
-- **Focus**: Core IAM infrastructure, Zero Trust baselines, centralized logging.
-- **Audience**: All teams
-- **Status**: Active
-- **Last Updated**: 2026-01-12
-
 ### Team-Specific Tracks (Centralized Role Registries)
 Tracks for each functional team whose roles are managed centrally in this repository:
 
@@ -22,19 +15,15 @@ Tracks for each functional team whose roles are managed centrally in this reposi
    - **SLA**: 100% OIDC Adoption (No Keys)
    - **Last Updated**: 2026-01-12
 
-2. **Platform Team (ITOC)**
-   - **Location**: `platform_team/`
-   - **Focus**: Privileged Access Management (PAM), JIT Access, and Infrastructure Ops.
-   - **Scope**: 120+ roles across infrastructure
-   - **SLA**: < 1s role assumption latency
-   - **Last Updated**: 2026-01-12
-
-3. **Security Team**
+2. **Security Team**
    - **Location**: `security_team/`
    - **Focus**: Guardrails (SCPs), Threat Detection, and Compliance Monitoring.
    - **Scope**: Organization-wide security posture
    - **SLA**: Continuous Compliance
    - **Last Updated**: 2026-01-12
+
+## Track Structure
+
 
 ## Track Structure
 
@@ -65,4 +54,15 @@ See the following for additional context:
 
 ## Archive
 
-Deprecated or archived tracks are available in `conductor/archive/`
+The following tracks have been successfully implemented and moved to `conductor/archive/`:
+
+1. **Foundation Track**
+   - **Archived**: `foundation_iam_20260112`
+   - **Status**: Completed
+
+2. **Platform Team (ITOC) Track**
+   - **Archived**: `platform_team_20260112`
+   - **Status**: Completed
+
+Deprecated or legacy tracks are also available in `conductor/archive/`
+
