@@ -3,3 +3,11 @@
 spec.md
 todo.md
 conductor/*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
