@@ -11,3 +11,4 @@ conductor/*
 .terraform.lock.hcl
 *.tfvars
 *.tfvars.json
+**/.terraform/*
