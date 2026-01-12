@@ -62,7 +62,7 @@ data "aws_iam_policy_document" "organization_access" {
       identifiers = ["cloudtrail.amazonaws.com"]
     }
 
-    actions = ["s3:PutObject"]
+    actions   = ["s3:PutObject"]
     resources = ["${aws_s3_bucket.logs.arn}/AWSLogs/${var.organization_id}/*"]
 
     condition {
