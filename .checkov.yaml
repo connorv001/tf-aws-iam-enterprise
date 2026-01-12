@@ -1,0 +1,25 @@
+# .checkov.yaml
+check:
+  - CKV_AWS_1 # Ensure all data stored in the S3 bucket is securely encrypted at rest
+  - CKV_AWS_18 # Ensure the S3 bucket has access logging enabled
+  - CKV_AWS_19 # Ensure all data stored in the S3 bucket is securely encrypted at rest
+  - CKV_AWS_21 # Ensure all data stored in the S3 bucket has versioning enabled
+  - CKV_AWS_144 # Ensure that S3 bucket has cross-region replication enabled
+  - CKV_AWS_145 # Ensure that S3 bucket has a public access block
+  - CKV_AWS_33 # Ensure KMS key rotation is enabled
+  - CKV_AWS_60 # Ensure IAM policy does not allow full admin privileges
+  - CKV_AWS_107 # Ensure IAM policies do not allow broad permissions
+  - CKV_AWS_108 # Ensure IAM policies do not allow permission to all resources
+  - CKV_AWS_109 # Ensure IAM policies do not allow permissions to all actions
+  - CKV_AWS_111 # Ensure IAM policies do not allow write access without constraints
+
+skip-check:
+  - CKV_AWS_144 # Skip cross-region replication for audit logs (usually handled by org settings)
+
+directory:
+  - modules
+  - examples
+
+quiet: true
+no-guide: true
+soft-fail: false
