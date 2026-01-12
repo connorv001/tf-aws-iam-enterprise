@@ -1,0 +1,22 @@
+{
+    "id": "oat_team",
+    "name": "OAT Team IAM (Operations & Analytics)",
+    "version": "1.0.0",
+    "status": "active",
+    "created_date": "2026-01-12",
+    "team": "operations",
+    "domain": "iam-oat",
+    "description": "IAM roles for operations and analytics team managing data pipelines, ETL processes, and analytics infrastructure",
+    "dependencies": [
+        "foundation_iam"
+    ],
+    "related_tracks": [
+        "platform_team"
+    ],
+    "critical": true,
+    "cost_center": 345,
+    "slo": {
+        "pipeline_reliability": "99%",
+        "etl_completion_sla_hours": 2
+    }
+}
