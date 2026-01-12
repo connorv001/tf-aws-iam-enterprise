@@ -17,5 +17,10 @@ output "role_arns" {
     platform_architect   = module.platform_roles.platform_architect_role_arn
     enterprise_architect = module.platform_roles.enterprise_architect_role_arn
     solution_architect   = module.platform_roles.solution_architect_role_arn
+    cloud_data_engineer  = module.platform_roles.cloud_data_engineer_role_arn
+    cloudwatch_admin     = module.platform_roles.cloudwatch_admin_role_arn
+    network_engineer     = module.platform_roles.network_engineer_role_arn
+    security_engineer    = module.platform_roles.security_engineer_role_arn
+    instance_scheduler   = module.platform_roles.instance_scheduler_role_arn
   }
 }
