@@ -29,7 +29,22 @@ data "aws_iam_policy_document" "platform_admin" {
       "s3:CreateBucket",
       "s3:DeleteBucket",
       "s3:PutBucket*",
-      "s3:GetBucket*"
+      "s3:GetBucket*",
+      "s3:ListBucket"
+    ]
+    resources = ["*"]
+  }
+
+  statement {
+    sid    = "PlatformReadOnlyAccess"
+    effect = "Allow"
+    actions = [
+      "iam:Get*",
+      "iam:List*",
+      "route53:Get*",
+      "route53:List*",
+      "cloudfront:Get*",
+      "cloudfront:List*"
     ]
     resources = ["*"]
   }

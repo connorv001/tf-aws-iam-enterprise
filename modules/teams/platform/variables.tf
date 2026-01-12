@@ -25,7 +25,10 @@ variable "enabled_roles" {
   description = "Map of roles to enable/disable"
   type        = map(bool)
   default = {
-    datadog  = true
-    engineer = true
+    datadog              = true
+    engineer             = true
+    platform_architects  = true
+    enterprise_architects = true
+    solution_architects  = true
   }
 }
