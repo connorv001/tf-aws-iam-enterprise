@@ -1,52 +1,39 @@
 # Project Tracks
 
-This file provides an index of all major tracks for the tf-aws-iam-enterprise project. Each track has its own detailed documentation in its respective folder.
+This file provides an index of all major tracks for the **tf-aws-iam-enterprise** project.
+**This repository is the Central Zero Trust Control Plane for all IAM Roles and Policies.**
 
 ## Active Tracks
 
 ### Foundation Track
 - **Location**: `foundation_iam/`
-- **Focus**: Core IAM infrastructure, password policies, KMS management, naming conventions
+- **Focus**: Core IAM infrastructure, Zero Trust baselines, centralized logging.
 - **Audience**: All teams
 - **Status**: Active
 - **Last Updated**: 2026-01-12
 
-### Team-Specific Tracks
-Tracks for each functional team managing IAM at scale:
+### Team-Specific Tracks (Centralized Role Registries)
+Tracks for each functional team whose roles are managed centrally in this repository:
 
-1. **DevOps Team**
+1. **DevOps & App Identity (Zero Trust)**
    - **Location**: `devops_team/`
-   - **Focus**: CI/CD pipelines, application deployment roles, service automation
-   - **Scope**: 50+ applications
-   - **SLA**: 99.9% pipeline reliability
+   - **Focus**: Centralized definition of EKS (IRSA), Fargate, and CI/CD roles using OIDC.
+   - **Scope**: Zero Trust Identity for all Workloads.
+   - **SLA**: 100% OIDC Adoption (No Keys)
    - **Last Updated**: 2026-01-12
 
 2. **Platform Team (ITOC)**
    - **Location**: `platform_team/`
-   - **Focus**: Infrastructure operations, multi-account management, platform services
+   - **Focus**: Privileged Access Management (PAM), JIT Access, and Infrastructure Ops.
    - **Scope**: 120+ roles across infrastructure
    - **SLA**: < 1s role assumption latency
    - **Last Updated**: 2026-01-12
 
-3. **OAT Team (Operations & Analytics)**
-   - **Location**: `oat_team/`
-   - **Focus**: Data pipelines, analytics infrastructure, operations automation
-   - **Scope**: Data management and ETL
-   - **SLA**: 99% pipeline reliability
-   - **Last Updated**: 2026-01-12
-
-4. **BI Team (Business Intelligence)**
-   - **Location**: `bi_team/`
-   - **Focus**: Data warehouse, Databricks, analytics, reporting
-   - **Scope**: BI infrastructure and tools
-   - **SLA**: < 5s query performance
-   - **Last Updated**: 2026-01-12
-
-5. **Security Team**
+3. **Security Team**
    - **Location**: `security_team/`
-   - **Focus**: Security operations, compliance, threat detection, incident response
-   - **Scope**: Organization-wide security
-   - **SLA**: < 5 min MTTD, < 15 min MTTR
+   - **Focus**: Guardrails (SCPs), Threat Detection, and Compliance Monitoring.
+   - **Scope**: Organization-wide security posture
+   - **SLA**: Continuous Compliance
    - **Last Updated**: 2026-01-12
 
 ## Track Structure
@@ -58,47 +45,15 @@ Each track includes:
 
 ## Key Features
 
-### Comprehensive Documentation
-- Architecture and design decisions
-- Operational procedures and runbooks
-- Troubleshooting and recovery guides
-- Compliance and audit requirements
+### Zero Trust Architecture
+- **Identity-Centric:** Authentication is required for every request.
+- **Least Privilege:** Access is granted only for specific resources and actions.
+- **Assume Breach:** Comprehensive logging and monitoring to detect anomalies.
 
-### Enterprise-Grade Design
-- Multi-account support across all teams
-- Least privilege access patterns
-- Comprehensive audit logging
-- Automated compliance monitoring
-
-### Clear Responsibilities
-- Team-specific role definitions
-- Permission boundaries and restrictions
-- Access control mechanisms
-- Escalation procedures
-
-## Maintenance Schedule
-
-### Daily
-- Monitor role usage and CloudTrail events
-- Alert on suspicious access patterns
-- Validate pipeline deployments
-
-### Weekly
-- Review access patterns per team
-- Validate role assumption metrics
-- Update operational dashboards
-
-### Monthly
-- Comprehensive access audits
-- Policy effectiveness review
-- Update documentation
-- Plan upcoming changes
-
-### Quarterly
-- Strategic role assessment
-- Technology and framework updates
-- Compliance certification
-- Cross-team alignment
+### Centralized Control
+- **Single Source of Truth:** All roles are defined here.
+- **Global Policy Updates:** Security patches are applied centrally and propagate instantly.
+- **Unified Audit:** Complete visibility into "Who has access to What".
 
 ## Related Resources
 

@@ -1,7 +1,9 @@
 # Security Team IAM Implementation Plan
 
+**Focus:** Centralized Governance, Guardrails, and Security Operations.
+
 ## Phase 1: Security Operations Roles (Weeks 1-2)
-- [ ] Create security-engineers role
+- [ ] Create `security-engineers` role definition
 - [ ] Configure CloudTrail access
 - [ ] Set up Security Hub access
 - [ ] Test security operations workflows
@@ -13,7 +15,7 @@
 - [ ] Test compliance checks
 
 ## Phase 3: Threat Detection (Weeks 3-4)
-- [ ] Create infosec-analyst role
+- [ ] Create `infosec-analyst` role
 - [ ] Configure GuardDuty access
 - [ ] Set up threat response workflows
 - [ ] Test incident response procedures
@@ -23,3 +25,8 @@
 - [ ] Set up threat alerts
 - [ ] Create audit reports
 - [ ] Establish continuous compliance
+
+## Success Criteria
+- Security roles are strictly defined and monitored.
+- Guardrails (SCPs) prevent unauthorized modifications to logs.
+- Centralized audit trail is immutable.
