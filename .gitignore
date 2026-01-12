@@ -1,0 +1,5 @@
+.automaker/*
+.npm-cache/*
+spec.md
+todo.md
+conductor/*
